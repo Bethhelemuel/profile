@@ -1,59 +1,94 @@
-# Portfolio
+# [NextJS Tailwind Portfolio Page](http://demos.creative-tim.com/nextjs-tailwind-portfolio-page?ref=readme-ntpp) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/nextjs-tailwind-portfolio-page&text=Check%20Material%20Tailwind%202%20Template%20made%20by%20@CreativeTim%20#webdesign%20#template%20#materialdesign%20#react%20https://www.creative-tim.com/product/nextjs-tailwind-portfolio-page)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
+![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/nextjs-tailwind-portfolio-page.svg)](https://github.com/creativetimofficial/nextjs-tailwind-portfolio-page/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/nextjs-tailwind-portfolio-page.svg)](https://github.com/creativetimofficial/nextjs-tailwind-portfolio-page/issues?q=is%3Aissue+is%3Aclosed)
 
-## Development server
+![Image](https://s3.amazonaws.com/creativetim_bucket/products/739/original/material-tailwind-react-portfolio-template-thumbnail.jpg?1697615979)
 
-To start a local development server, run:
+Introducing Tailwind Portfolio Page, a versatile and stylish portfolio template built on the foundation of Tailwind CSS and Material Tailwind.
 
-```bash
-ng serve
-```
+Are you in search of a professionally designed and highly customizable portfolio web page template tailored for artists, designers, photographers, and creative professionals to showcase their work and establish a strong online presence? Look no further! We are excited to present to you our Free Portfolio Page Template, meticulously crafted to cater to the needs of portfolio website developers like you.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+This template, designed with Tailwind CSS and Material Tailwind, offers effortless customization to align perfectly with your website's unique branding. The free portfolio template boasts essential features such as hero, logo, testimonial, and features sections.
 
-## Code scaffolding
+**Documentation built by Developers**
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Each element is well presented in very complex documentation.
 
-```bash
-ng generate component component-name
-```
+You can read more about the [documentation here](https://www.material-tailwind.com/docs/react/installation).
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+**HELPFUL LINKS**
 
-```bash
-ng generate --help
-```
+- View [Github Repository](https://github.com/creativetimofficial/nextjs-tailwind-portfolio-page)
+- Check [FAQ Page](https://www.creative-tim.com/faq)
 
-## Building
+## [Demo](https://creative-tim.com/product/nextjs-tailwind-portfolio-page)
 
-To build the project run:
+## Quick start
 
-```bash
-ng build
-```
+Quick start options:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Download from [Creative Tim](https://www.creative-tim.com/product/nextjs-tailwind-portfolio-page?ref=readme-ntpp).
 
-## Running unit tests
+## Terminal Commands
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+1. Download and Install NodeJs LTS version from [NodeJs Official Page](https://nodejs.org/en/download/).
+2. Navigate to the root ./ directory of the product and run `npm install` to install our local dependencies.
 
-```bash
-ng test
-```
+## Documentation
 
-## Running end-to-end tests
+The documentation for the Material Dashboard is hosted at our [website](https://www.material-tailwind.com/docs/react/installation?ref=readme-ntpp).
 
-For end-to-end (e2e) testing, run:
+## Browser Support
 
-```bash
-ng e2e
-```
+At present, we officially aim to support the last two versions of the following browsers:
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
 
-## Additional Resources
+## Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Live Preview](https://demos.creative-tim.com/nextjs-tailwind-portfolio-page?ref=readme-ntpp)
+- [Download Page](https://www.creative-tim.com/product/nextjs-tailwind-portfolio-page?ref=readme-ntpp)
+- Documentation is [here](https://www.material-tailwind.com/docs/react/installation?ref=readme-ntpp)
+- [License Agreement](https://www.creative-tim.com/license?ref=readme-ntpp)
+- [Support](https://www.creative-tim.com/contact-us?ref=readme-ntpp)
+- Issues: [Github Issues Page](https://github.com/creativetimofficial/nextjs-tailwind-portfolio-page/issues)
+- [Nepcha Analytics](https://nepcha.com?ref=readme) - Analytics tool for your website
+
+## Reporting Issues
+
+We use GitHub Issues as the official bug tracker for the Nextjs + Tailwind Portfolio Page. Here are some advices for our users that want to report an issue:
+
+1. Make sure that you are using the latest version of the Nextjs + Tailwind Portfolio Page. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/product/nextjs-tailwind-portfolio-page?ref=readme-ntpp).
+2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
+3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
+
+## Technical Support or Questions
+
+If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us?ref=readme-ntpp) instead of opening an issue.
+
+## Licensing
+
+- Copyright 2023 [Creative Tim](https://www.creative-tim.com?ref=readme-ntpp)
+- Creative Tim [license](https://www.creative-tim.com/license?ref=readme-ntpp)
+
+## Useful Links
+
+- [More products](https://www.creative-tim.com/templates?ref=readme-ntpp) from Creative Tim
+
+- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
+
+- [Freebies](https://www.creative-tim.com/bootstrap-themes/free?ref=readme-ntpp) from Creative Tim
+
+- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=readme-ntpp) (earn money)
+
+##### Social Media
+
+Twitter: <https://twitter.com/CreativeTim>
+
+Facebook: <https://www.facebook.com/CreativeTim>
+
+Dribbble: <https://dribbble.com/creativetim>
+
+Google+: <https://plus.google.com/+CreativetimPage>
+
+Instagram: <https://instagram.com/creativetimofficial>

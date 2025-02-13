@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="567.453" height="567.453" viewBox="0 0 567.453 567.453">
+  <g id="dotnet-svgrepo-com" transform="translate(0.892)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="279.828" cy="279.828" r="279.828" transform="translate(6.906)" fill="#5c2d91"/>
+    <path id="Path_4" data-name="Path 4" d="M92.778,9A279.828,279.828,0,1,0,487.86,404.082Z" transform="translate(0 69.702)" fill="#fff" opacity="0.1"/>
+    <path id="Path_5" data-name="Path 5" d="M18.321,63.323A11.805,11.805,0,0,1,9.576,59.65a12.068,12.068,0,0,1-3.585-8.745,12.242,12.242,0,0,1,3.585-8.745,11.718,11.718,0,0,1,8.745-3.76,11.98,11.98,0,0,1,8.745,3.76,12.155,12.155,0,0,1,3.673,8.745,11.98,11.98,0,0,1-3.673,8.745,12.068,12.068,0,0,1-8.745,3.673Z" transform="translate(53.295 297.393)" fill="#fff"/>
+    <path id="Path_6" data-name="Path 6" d="M140.961,182.184H118.05L36.113,55.038a52.994,52.994,0,0,1-5.072-9.969h-.7a163.61,163.61,0,0,1,.874,21.862V182.184H12.59V22.77H36.813l79.751,124.873q4.984,7.783,6.471,10.668h.437a168.674,168.674,0,0,1-1.137-23.436V22.77h18.626Z" transform="translate(104.41 176.345)" fill="#fff"/>
+    <path id="Path_7" data-name="Path 7" d="M116.735,182.184H32V22.77h80.8V39.647H51.063V92.64H108.6v16.79H51.063V164.7h65.76Z" transform="translate(254.734 176.345)" fill="#fff"/>
+    <path id="Path_8" data-name="Path 8" d="M154.124,39.647H107.778V182.184H89.152V39.647H43.33V22.77H154.124Z" transform="translate(342.48 176.345)" fill="#fff"/>
+  </g>
+</svg>
