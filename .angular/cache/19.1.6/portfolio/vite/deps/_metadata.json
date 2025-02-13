@@ -1,0 +1,52 @@
+{
+  "hash": "54890f1e",
+  "configHash": "6fa0a2d6",
+  "lockfileHash": "7f032e40",
+  "browserHash": "816b1fd5",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "42223ea0",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "eb267744",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "227de33a",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "c5b809f4",
+      "needsInterop": false
+    },
+    "clipboard": {
+      "src": "../../../../../../node_modules/clipboard/dist/clipboard.js",
+      "file": "clipboard.js",
+      "fileHash": "4c17f846",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-KG3FTUEA": {
+      "file": "chunk-KG3FTUEA.js"
+    },
+    "chunk-V7763DXU": {
+      "file": "chunk-V7763DXU.js"
+    },
+    "chunk-XGZDCWHC": {
+      "file": "chunk-XGZDCWHC.js"
+    },
+    "chunk-3OV72XIM": {
+      "file": "chunk-3OV72XIM.js"
+    }
+  }
+}
