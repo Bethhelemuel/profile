@@ -14,10 +14,10 @@ export function FixedPlugin() {
           width={128}
           height={128}
           className="w-5 h-5"
-          alt="Material Tailwind"
-          src="https://www.material-tailwind.com/favicon.png"
+          alt="Downlaod CV"
+          src="image/download.svg"
         />{" "}
-        Made With Material Tailwind
+        Download CV
       </Button>
     </a>
   );

@@ -2,72 +2,174 @@
 
 import { ProjectCard } from "@/components";
 import { Typography } from "@material-tailwind/react";
+import Image from "next/image";
 
 const PROJECTS = [
   {
-    img: "/image/blog-1.svg",
+    Image: "/image/blog-1.svg",
     title: "Mobile App Development",
     desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
   },
   {
-    img: "/image/blog2.svg",
+    Image: "/image/blog2.svg",
     title: "Landing Page Development",
-    desc: "Promotional landing page for a  fitness website Summer Campaign. Form development included.",
+    desc: "Promotional landing page for a fitness website Summer Campaign. Form development included.",
   },
   {
-    img: "/image/blog3.svg",
+    Image: "/image/blog3.svg",
     title: "Mobile App Development",
     desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
   },
   {
-    img: "/image/blog4.svg",
+    Image: "/image/blog4.svg",
     title: "E-commerce development",
-    desc: "Ecommerce website offering  access to the latest and greatest gadgets and accessories.",
+    desc: "Ecommerce website offering access to the latest and greatest gadgets and accessories.",
   },
-  {
-    img: "/image/blog-1.svg",
-    title: "Mobile App Development",
-    desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
-  },
-  {
-    img: "/image/blog2.svg",
-    title: "Landing Page Development",
-    desc: "Promotional landing page for a  fitness website Summer Campaign. Form development included.",
-  },
-  {
-    img: "/image/blog3.svg",
-    title: "Mobile App Development",
-    desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
-  },
-  {
-    img: "/image/blog4.svg",
-    title: "E-commerce development",
-    desc: "Ecommerce website offering  access to the latest and greatest gadgets and accessories.",
-  },
+  // ...other items
 ];
 
 export function Projects() {
   return (
-    <section className="py-28 px-8">
-      <div className="container mx-auto mb-20 text-center">
-        <Typography variant="h2" color="blue-gray" className="mb-4">
-          My Projects
-        </Typography>
-        <Typography
-          variant="lead"
-          className="mx-auto w-full px-4 font-normal !text-gray-500 lg:w-6/12"
-        >
-          Whether you have a mobile app idea that needs to come to life or a
-          website that requires a facelift, I&apos;m here to turn your digital
-          dreams into reality.
-        </Typography>
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid gap-4">
+        <div>
+          <Image
+            className="rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+            alt="Project Image 1"
+            layout="responsive"
+            width={500}
+            height={300}
+          />
+        </div>
+        <div>
+          <Image
+            className="rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
+            alt="Project Image 2"
+            layout="responsive"
+            width={500}
+            height={300}
+          />
+        </div>
+        <div>
+          <Image
+            className="rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
+            alt="Project Image 3"
+            layout="responsive"
+            width={500}
+            height={300}
+          />
+        </div>
       </div>
-      <div className="container mx-auto grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 xl:grid-cols-4">
-        {PROJECTS.map((props, idx) => (
-          <ProjectCard key={idx} {...props} />
-        ))}
+      <div className="grid gap-4">
+        <div>
+          <Image
+            className="rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
+            alt="Project Image 4"
+            layout="responsive"
+            width={500}
+            height={300}
+          />
+        </div>
+        <div>
+          <Image
+            className="rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
+            alt="Project Image 5"
+            layout="responsive"
+            width={500}
+            height={300}
+          />
+        </div>
+        <div>
+          <Image
+            className="rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
+            alt="Project Image 6"
+            layout="responsive"
+            width={500}
+            height={300}
+          />
+          
+        </div>
+
+        
+        
       </div>
-    </section>
+      <div className="grid gap-4">
+        <div>
+          <Image
+            className="rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+            alt="Project Image 1"
+            layout="responsive"
+            width={500}
+            height={300}
+          />
+        </div>
+        <div>
+          <Image
+            className="rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
+            alt="Project Image 2"
+            layout="responsive"
+            width={500}
+            height={300}
+          />
+        </div>
+        <div>
+          <Image
+            className="rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
+            alt="Project Image 3"
+            layout="responsive"
+            width={500}
+            height={300}
+          />
+        </div>
+      </div>
+
+      <div className="grid gap-4">
+        <div>
+          <Image
+            className="rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
+            alt="Project Image 4"
+            layout="responsive"
+            width={500}
+            height={300}
+          />
+        </div>
+        <div>
+          <Image
+            className="rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
+            alt="Project Image 5"
+            layout="responsive"
+            width={500}
+            height={300}
+          />
+        </div>
+        <div>
+          <Image
+            className="rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
+            alt="Project Image 6"
+            layout="responsive"
+            width={500}
+            height={300}
+          />
+          
+        </div>
+
+        
+        
+      </div>
+      {/* Repeat the structure for other columns */}
+    </div>
   );
 }
 

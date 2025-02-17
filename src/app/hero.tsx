@@ -45,7 +45,7 @@ function Hero() {
         </div>
         <Image
           width={1024}
-          height={1024}
+          height={1024} 
           alt="team work"
           src="/image/image-7.svg"
           className="h-[36rem] w-full rounded-xl object-cover"

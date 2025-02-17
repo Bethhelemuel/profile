@@ -21,7 +21,7 @@
     transform: rotate(-90deg) translateX(-100vh);
     overflow-x: hidden;
     overflow-y: scroll;
-    /* scroll-snap-type: y mandatory; Enable snap scrolling */
+    scroll-snap-type: y mandatory; 
   }
   
   article {
@@ -46,4 +46,6 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
-  
+  .eye-btn{
+    margin-right:5px
+  }

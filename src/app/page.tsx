@@ -10,6 +10,9 @@ import Resume from "./resume";
 import Testimonial from "./testimonial";
 import PopularClients from "./popular-clients";
 import ContactForm from "./contact-form";
+import Timeline from "./Timeline";
+import Certifications from "./Certifications";
+
 
 export default function Portfolio() {
   return (
@@ -23,10 +26,16 @@ export default function Portfolio() {
     </section>
     <section>
     <TechStack />
+    </section> 
+    <section>
+      <Timeline/>
+    </section> 
+    <section>
+    <Projects/>
     </section>
-    <section>3</section> 
-    <section>4</section>
-    <section>5</section>
+    <section>
+      <Certifications/>
+    </section>
   </article>
 </main>  
 
