@@ -1,121 +1,63 @@
-import React from "react";
+'use clinet'
+import React, { useState } from "react";
 import {
   Navbar as MTNavbar,
-  Collapse,
+  Input,
   Button,
-  IconButton,
-  Typography,
 } from "@material-tailwind/react";
-import {
-  RectangleStackIcon,
-  UserCircleIcon,
-  CommandLineIcon,
-  Squares2X2Icon,
-  XMarkIcon,
-  Bars3Icon,
-} from "@heroicons/react/24/solid";
-
-const NAV_MENU = [
-  {
-    name: "Page",
-    icon: RectangleStackIcon,
-  },
-  {
-    name: "Account",
-    icon: UserCircleIcon,
-  },
-  {
-    name: "Docs",
-    icon: CommandLineIcon,
-    href: "https://www.material-tailwind.com/docs/react/installation",
-  },
-];
-
-interface NavItemProps {
-  children: React.ReactNode;
-  href?: string;
-}
-
-function NavItem({ children, href }: NavItemProps) {
-  return (
-    <li>
-      <Typography
-        as="a"
-        href={href || "#"}
-        target={href ? "_blank" : "_self"}
-        variant="paragraph"
-        color="gray"
-        className="flex items-center gap-2 font-medium text-gray-900"
-      >
-        {children}
-      </Typography>
-    </li>
-  );
-}
+import { ClipboardIcon, CheckCircleIcon } from "@heroicons/react/24/solid";
+import Socials from "./socials";
 
 export function Navbar() {
-  const [open, setOpen] = React.useState(false);
+  const [copied, setCopied] = useState(false);
+  const email = "tmphugo@gmail.com";
 
-  const handleOpen = () => setOpen((cur) => !cur);
-
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpen(false)
-    );
-  }, []);
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // Reset message after 2 seconds
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+    }
+  };
 
   return (
     <MTNavbar shadow={false} fullWidth className="border-0 sticky top-0 z-50">
-      <div className="container mx-auto flex items-center justify-between">
-        <Typography color="blue-gray" className="text-lg font-bold">
-          tmphugo@gmail.com
-        </Typography>
-        <ul className="ml-10 hidden items-center gap-8 lg:flex">
-          {NAV_MENU.map(({ name, icon: Icon, href }) => (
-            <NavItem key={name} href={href}>
-              <Icon className="h-5 w-5" />
-              {name}
-            </NavItem>
-          ))}
-        </ul>
-        <div className="hidden items-center gap-2 lg:flex">
-          <Button variant="text">Sign In</Button>
-          <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color="gray">blocks</Button>
-          </a>
+      <div className="container mx-auto flex items-center justify-between"> 
+        <div className="w-full max-w-[16rem]">
+          <div className="relative">
+            <label htmlFor="email" className="sr-only">Email</label>
+            <Input
+  id="email"
+  type="text"
+  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm font-bold rounded-lg px-2.5 py-2 w-full"
+  value={email}
+  disabled
+  readOnly
+/>
+
+
+            <button
+              onClick={handleCopy}
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-900 bg-white border border-gray-300 rounded-lg p-2 flex items-center"
+            >
+              {copied ? (
+                <>
+                  <CheckCircleIcon className="w-4 h-4 text-black mr-1" />
+                  <span className="text-xs font-semibold text-black">Copied</span>
+                </>
+              ) : (
+                <>
+                  <ClipboardIcon className="w-4 h-4 text-gray-500 mr-1" />
+                  <span className="text-xs font-semibold">Copy</span>
+                </>
+              )}
+            </button>
+          </div>
         </div>
-        <IconButton
-          variant="text"
-          color="gray"
-          onClick={handleOpen}
-          className="ml-auto inline-block lg:hidden"
-        >
-          {open ? (
-            <XMarkIcon strokeWidth={2} className="h-6 w-6" />
-          ) : (
-            <Bars3Icon strokeWidth={2} className="h-6 w-6" />
-          )}
-        </IconButton>
+        <Socials />
       </div>
-      <Collapse open={open}>
-        <div className="container mx-auto mt-3 border-t border-gray-200 px-2 pt-4">
-          <ul className="flex flex-col gap-4">
-            {NAV_MENU.map(({ name, icon: Icon }) => (
-              <NavItem key={name}>
-                <Icon className="h-5 w-5" />
-                {name}
-              </NavItem>
-            ))}
-          </ul>
-          {/* <div className="mt-6 mb-4 flex items-center gap-2">
-            <Button variant="text">Sign In</Button>
-            <a href="https://www.material-tailwind.com/blocks" target="_blank">
-              <Button color="gray">blocks</Button>
-            </a>
-          </div> */}
-        </div>
-      </Collapse> 
     </MTNavbar>
   );
 }

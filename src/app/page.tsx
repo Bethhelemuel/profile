@@ -1,53 +1,78 @@
-// components
+"use client";
+
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+// Components
 import { Navbar, Footer } from "@/components";
 
-// sections
+// Sections
 import Hero from "./hero";
 import TechStack from "./teck-stack";
-import Skills from "./skills";
 import Projects from "./projects";
-import Resume from "./resume";
-import Testimonial from "./testimonial";
-import PopularClients from "./popular-clients";
-import ContactForm from "./contact-form";
-import Timeline from "./Timeline";
 import Certifications from "./Certifications";
+import MyTimeline from "./Timeline";
 
+// Animation function
+const FadeInSection = ({ children }: { children: React.ReactNode }) => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: false, // Animation triggers every time it enters the viewport
+    threshold: 0.3, // Trigger when 30% of the section is visible
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        opacity: 1,
+        y: -0,
+        transition: { duration: 0.6, ease: "easeOut" },
+      });
+    } else {
+      controls.start({
+        opacity: 0,
+        y: -50,
+      });
+    }
+  }, [inView, controls]);
+
+  return (
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={controls}
+      className="mb-16" // Adjust spacing as needed
+    >
+      {children}
+    </motion.section>
+  );
+};
 
 export default function Portfolio() {
   return (
     <>
       <Navbar />
-
       <main>
-  <article>
-    <section>
-      <Hero/>
-    </section>
-    <section>
-    <TechStack />
-    </section> 
-    <section>
-      <Timeline/>
-    </section> 
-    <section>
-    <Projects/>
-    </section>
-    <section>
-      <Certifications/>
-    </section>
-  </article>
-</main>  
-
-      {/* <Hero />
-      <Clients />
-      <Skills />
-      <Projects />
-      <Resume />
-      <Testimonial />
-      <PopularClients />
-      <ContactForm /> 
-      <Footer />*/}
+        <article>
+          <FadeInSection>
+            <Hero />
+          </FadeInSection>
+          <FadeInSection>
+            <TechStack />
+          </FadeInSection>
+          <FadeInSection>
+            <MyTimeline />
+          </FadeInSection>
+          <FadeInSection>
+            <Projects />
+          </FadeInSection>
+          <FadeInSection>
+            <Certifications />
+          </FadeInSection>
+        </article>
+      </main>
+      {/* <Footer /> */}
     </>
   );
 }

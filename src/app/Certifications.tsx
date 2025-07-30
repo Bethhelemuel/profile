@@ -62,7 +62,7 @@ export default function Certifications() {
   const [selectedCertification, setSelectedCertification] = useState(null);
 
   return (
-    <div className="p-2">
+    <div className="p-[50px]">
       <h1 className="text-2xl font-bold mb-6">Certifications</h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {certifications.map((cert) => (
@@ -75,6 +75,8 @@ export default function Certifications() {
               src={cert.image}
               alt={cert.title}
               className="w-full rounded-lg"
+              width={200}
+              height={200}
             />
             <p className="text-center mt-2 font-semibold text-[12px]">
               {cert.title}
@@ -90,7 +92,7 @@ export default function Certifications() {
         placement="right"
         size={500}
       >
-        <div className="p-6 mt-[70px]">
+        <div className="p-10 mt-[70px]">
           {selectedCertification && (
             <>
               <h2 className="text-xl font-bold mb-4">

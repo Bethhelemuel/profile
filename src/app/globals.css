@@ -5,15 +5,19 @@
 * {
     margin: 0;
     scroll-behavior: smooth;
+    /* pointer-events: none;  */ 
+    user-select: none;
   }
-  
+  input{ 
+    font-weight: bold;
+  }
   ::-webkit-scrollbar {
     display: none;
   }
   
   main {
     position: fixed;
-    top: 0;
+    top: 0; 
     left: 0;
     width: 100vh;
     height: 100vw;
