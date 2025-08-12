@@ -74,7 +74,21 @@ const CLIENTS = [
     level: 50,
     details: ["Core Node.js Concepts","Package Management (NPM & Yarn)", "File System & OS Module", "HTTP & Web Servers","Authentication & Security","Express.js & Middleware","Asynchronous Programming & Event Loop","Database Integration"],
   },
-
+  {
+    id: "laravel",
+    title: "Laravel",
+    level: 65,
+    details: [
+      "MVC Architecture & Routing",
+      "Eloquent ORM & Relationships",
+      "Database Migrations & Seeders",
+      "Authentication & Authorization (Sanctum/Passport)",
+      "API Resource Controllers & JSON Responses",
+      "Middleware & Request Validation",
+      "Environment Configuration & .env Files",
+      "Artisan Commands & Custom Commands"
+    ],
+  }, 
   {
     id: "php",
     title: "php",
@@ -114,6 +128,23 @@ const CLIENTS = [
     level: 55,
     details: ["Advanced Types & Type Inference", "Generic Functions and Constraints", "TypeScript with Third-Party Libraries","TypeScript with React"," Asynchronous Programming & Promises"],
   },
+
+  {
+    id: "vuejs",
+    title: "Vue.js",
+    level: 40,
+    details: [
+      "Vue CLI & Project Structure",
+      "Reactivity System & Data Binding",
+      "Components (Props, Events, Slots)",
+      "Vue Router (Routing & Navigation Guards)",
+      "State Management with Vuex or Pinia",
+      "Computed Properties & Watchers",
+      "Lifecycle Hooks",
+      "API Integration with Axios",
+      "Form Handling & Validation",
+      "Single File Components (.vue files)"
+    ],  },
 
   {
     id: "ubuntu",

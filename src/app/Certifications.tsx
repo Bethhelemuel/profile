@@ -56,6 +56,31 @@ const certifications = [
       "User authentication and authorization",
     ],
   },
+
+    {
+    id: 5,
+    image: "/certifications/advanced-angular.png",
+    pdf: "/certifications/advanced-angular.pdf",
+    title: "Advanced Angular Development",
+    link: "https://coursera.org/verify/2D7X7SOZP6CE",
+    info: [
+        "Angular architecture and core concepts",
+        "Components and component interaction",
+        "Templates, data binding, and interpolation",
+        "Directives: structural and attribute",
+        "Services and dependency injection (DI)",
+        "Routing, route guards, and lazy loading",
+        "Forms: Template-driven and Reactive Forms",
+        "RxJS basics and reactive programming in Angular",
+        "HttpClient and API communication",
+        "Authentication and authorization",
+        "Change detection strategies",
+        "State management (NgRx or services)",
+        "Testing: unit tests and end-to-end tests",
+        "Performance optimization",
+        "Deployment strategies",
+    ],
+  },
 ];
 
 export default function Certifications() {

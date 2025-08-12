@@ -1,38 +1,14 @@
 "use client";
 
-import { ProjectCard } from "@/components";
-import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
-
-const PROJECTS = [
-  {
-    Image: "/image/blog-1.svg",
-    title: "Mobile App Development",
-    desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
-  },
-  {
-    Image: "/image/blog2.svg",
-    title: "Landing Page Development",
-    desc: "Promotional landing page for a fitness website Summer Campaign. Form development included.",
-  },
-  {
-    Image: "/image/blog3.svg",
-    title: "Mobile App Development",
-    desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
-  },
-  {
-    Image: "/image/blog4.svg",
-    title: "E-commerce development",
-    desc: "Ecommerce website offering access to the latest and greatest gadgets and accessories.",
-  },
-  // ...other items
-];
 
 export function Projects() {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pl-10 pr-10">
-      <div className="grid gap-4">
-        <div>
+    <div className="relative">
+      {/* Blurred Background */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pl-10 pr-10 filter blur-md pointer-events-none">
+        {/* Column 1 */}
+        <div className="grid gap-4">
           <Image
             className="rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
@@ -41,8 +17,6 @@ export function Projects() {
             width={500}
             height={300}
           />
-        </div>
-        <div>
           <Image
             className="rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
@@ -51,8 +25,6 @@ export function Projects() {
             width={500}
             height={300}
           />
-        </div>
-        <div>
           <Image
             className="rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
@@ -62,9 +34,9 @@ export function Projects() {
             height={300}
           />
         </div>
-      </div>
-      <div className="grid gap-4">
-        <div>
+
+        {/* Column 2 */}
+        <div className="grid gap-4">
           <Image
             className="rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
@@ -73,8 +45,6 @@ export function Projects() {
             width={500}
             height={300}
           />
-        </div>
-        <div>
           <Image
             className="rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
@@ -83,8 +53,6 @@ export function Projects() {
             width={500}
             height={300}
           />
-        </div>
-        <div>
           <Image
             className="rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
@@ -93,14 +61,10 @@ export function Projects() {
             width={500}
             height={300}
           />
-          
         </div>
 
-        
-        
-      </div>
-      <div className="grid gap-4">
-        <div>
+        {/* Column 3 */}
+        <div className="grid gap-4">
           <Image
             className="rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
@@ -109,8 +73,6 @@ export function Projects() {
             width={500}
             height={300}
           />
-        </div>
-        <div>
           <Image
             className="rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
@@ -119,8 +81,6 @@ export function Projects() {
             width={500}
             height={300}
           />
-        </div>
-        <div>
           <Image
             className="rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
@@ -130,10 +90,9 @@ export function Projects() {
             height={300}
           />
         </div>
-      </div>
 
-      <div className="grid gap-4">
-        <div>
+        {/* Column 4 */}
+        <div className="grid gap-4">
           <Image
             className="rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
@@ -142,8 +101,6 @@ export function Projects() {
             width={500}
             height={300}
           />
-        </div>
-        <div>
           <Image
             className="rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
@@ -152,8 +109,6 @@ export function Projects() {
             width={500}
             height={300}
           />
-        </div>
-        <div>
           <Image
             className="rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
@@ -162,13 +117,15 @@ export function Projects() {
             width={500}
             height={300}
           />
-          
         </div>
-
-        
-        
       </div>
-      {/* Repeat the structure for other columns */}
+
+      {/* Overlay with text */}
+      <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+        <h1 className="text-white text-4xl md:text-6xl font-bold uppercase">
+          Under Construction
+        </h1>
+      </div>
     </div>
   );
 }

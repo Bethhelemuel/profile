@@ -1,23 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Input, Button, Typography, Drawer } from "@material-tailwind/react";
+import { Button, Typography, Drawer } from "@material-tailwind/react";
 import Socials from "@/components/socials";
 
 function Hero() {
   const [openDrawer, setOpenDrawer] = useState(false);
 
+  // Images array
+  const images = ["/image/hero1.png", "/image/hero2.png", "/image/hero3.png"];
+  const [currentImage, setCurrentImage] = useState(0);
+
+  // Auto-change every 3s
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    },3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <header className="bg-white p-8">
       <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center lg:grid-cols-2">
+        {/* Left text */}
         <div className="row-start-2 lg:row-auto">
           <Typography
             variant="lead"
             color="blue-gray"
             className="mb-4 xl:pr-28 !text-gray-500 inline-flex items-center gap-2"
           >
-            Full stack developer  
+            Full stack developer
             <Image
               alt="RSA"
               width={12}
@@ -43,26 +56,35 @@ function Hero() {
             you&apos;ll get a glimpse of my journey in the world of web
             development, where creativity meets functionality.
           </Typography>
-          
-          <div className="flex gap-4">
-          
-            <Button onClick={() => setOpenDrawer(true)} className="bg-black text-white">
-            More
-            </Button>
 
+          <div className="flex gap-4">
+            <Button
+              onClick={() => setOpenDrawer(true)}
+              className="bg-black text-white"
+            >
+              More
+            </Button>
           </div>
         </div>
 
-        <Image
-          width={1024}
-          height={1024} 
-          alt="team work"
-          src="/image/image-7.svg"
-          className="h-[36rem] w-full rounded-xl object-cover" 
-        />
+        {/* Right circular image with fade animation */}
+        <div className="relative h-96 w-96 rounded-full overflow-hidden">
+          {images.map((src, index) => (
+            <Image
+              key={index}
+              src={src}
+              alt={`Slide ${index}`}
+              width={1024}
+              height={1024}
+              className={`absolute top-0 left-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
+                index === currentImage ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
+        </div>
       </div>
 
-      {/* Right Side Drawer */}
+      {/* Drawer */}
       <Drawer
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}
@@ -74,27 +96,38 @@ function Hero() {
             About me
           </Typography>
 
-         <div className="grid grid-cols-1 gap-10">
-          <div className="bg-gray-100 p-4 rounded-lg">
-          <Typography variant="small" color="gray" className="font-normal text-gray-800">
-          I am a highly motivated software developer with a strong foundation in various programming languages and technologies. From PHP, C#, and Angular 
-          to JavaScript and React Native, I enjoy working with both front-end and back-end technologies. My career has allowed me to lead projects, work 
-          with diverse teams, and continuously expand my skill set through hands-on experience and self-driven learning.
-          </Typography>
+          <div className="grid grid-cols-1 gap-10">
+            <div className="bg-gray-100 p-4 rounded-lg">
+              <Typography
+                variant="small"
+                color="gray"
+                className="font-normal text-gray-800"
+              >
+                I am a highly motivated software developer with a strong foundation in 
+                various programming languages and technologies. From PHP, C#, and Angular
+                 to JavaScript, React, and React Native, I enjoy working with both front-end 
+                 and back-end technologies. My career has allowed me to lead projects, 
+                 work with diverse teams, and continuously expand my skill set through 
+                 hands-on experience and self-driven learning.
+              </Typography>
+            </div>
+
+            <div className="bg-gray-100 p-4 rounded-lg">
+              <Typography
+                variant="small"
+                color="gray"
+                className="font-normal text-gray-800"
+              >
+                I believe in continuous improvement, whether refining existing
+                skills or learning new technologies. With experience in SQL,
+                SQLite, and Android development, I am dedicated to enhancing my
+                programming expertise. Currently, I am focused on deepening my
+                knowledge of React Native, expanding my work with mobile
+                applications, and exploring AI to stay adaptable to emerging
+                technologies in the software development world.
+              </Typography>
+            </div>
           </div>
-   
-  
-          <div className="bg-gray-100 p-4 rounded-lg">
-          <Typography variant="small" color="gray" className="font-normal text-gray-800">
-          I believe in continuous improvement, whether refining existing skills or learning new technologies. With experience in SQL, SQLite, and Android development,
-           I am dedicated to enhancing my programming expertise. Currently, I am focused on deepening my knowledge of React Native, expanding my work with 
-           mobile applications, and exploring AI to stay adaptable to emerging technologies in the software development world.
-          </Typography>
-
-          </div> 
-
-          
-         </div>
 
           <Button
             onClick={() => setOpenDrawer(false)}
