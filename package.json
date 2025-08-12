@@ -4,7 +4,7 @@
   "private": true,
   "author": "Thato",
   "license": "MIT",
-  "homepage": "https://github.com/Bethhelemuel/profile",
+  "homepage": "https://Bethhelemuel.github.io/profile",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
