@@ -1,17 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // Required for static export
-  images: {
-    unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
-  },
-  basePath: "/profile", // 👈 Repo name
-  assetPrefix: "/profile/",
+  output: 'export',
+  basePath: '/profile',          // your repo name here
+  assetPrefix: '/profile/',      // trailing slash important
 };
 
 module.exports = nextConfig;
