@@ -5,7 +5,7 @@ import { Drawer, Card, Button } from "@material-tailwind/react";
 const certifications = [
   {
     id: 1,
-    image: "/certifications/advanced-react.jpg",
+    image: "profile/certifications/advanced-react.jpg",
     pdf: "/certifications/advanced-react.pdf",
     title: "Advanced React",
     link: "https://coursera.org/verify/RBMAAMAH3X2O",
@@ -18,7 +18,7 @@ const certifications = [
   },
   {
     id: 2,
-    image: "/certifications/ux-ui.jpg",
+    image: "profile/certifications/ux-ui.jpg",
     pdf: "/certifications/ux-ui.pdf",
     title: "Principles of UX/UI Design",
     link: "https://coursera.org/verify/130N0MSCXV2W",
@@ -31,7 +31,7 @@ const certifications = [
   },
   {
     id: 3,
-    image: "/certifications/version-control.jpg",
+    image: "profile/certifications/version-control.jpg",
     pdf: "/certifications/version-control.pdf",
     title: "Version Control",
     link: "https://coursera.org/verify/4C26EY2XQPLG",
@@ -44,7 +44,7 @@ const certifications = [
   },
   {
     id: 4,
-    image: "/certifications/linux.jpg",
+    image: "profile/certifications/linux.jpg",
     pdf: "/certifications/linux.pdf",
     title: "Linux Server Management and Security",
     link: "https://coursera.org/verify/9T0ECFLKTF8G",
@@ -56,7 +56,7 @@ const certifications = [
   },
   {
     id: 5,
-    image: "/certifications/advanced-angular.png",
+    image: "profile/certifications/advanced-angular.png",
     pdf: "/certifications/advanced-angular.pdf",
     title: "Advanced Angular Development",
     link: "https://coursera.org/verify/2D7X7SOZP6CE",
@@ -77,7 +77,7 @@ const certifications = [
       "Performance optimization",
       "Deployment strategies",
     ],
-  },
+  }, 
 ];
 
 export default function Certifications() {

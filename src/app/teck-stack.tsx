@@ -241,7 +241,7 @@ export function TechStack() {
               variant="h5" 
               className="mb-4" 
               placeholder="" 
-              onPointerEnterCapture={() => {}} 
+              onPointerEnterCapture={() => {}}  
               onPointerLeaveCapture={() => {}}
             >
               {selectedTech.title}
