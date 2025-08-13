@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: '/profile',
+  assetPrefix: '/profile/',
   output: 'export',
-  basePath: '/profile',          // your repo name here
-  assetPrefix: '/profile/',      // trailing slash important
 };
 
 module.exports = nextConfig;
