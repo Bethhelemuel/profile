@@ -197,7 +197,7 @@ export function TechStack() {
         </Typography>
         <p className="font-bold text-gray-400 text-[11px] mb-8 inline-flex items-center">
           click for more info 
-          <Image src="/image/click.gif" width={20} height={20} alt="click" className="ml-2" />
+          <Image src="profile/image/click.gif" width={20} height={20} alt="click" className="ml-2" />
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-6"> 
@@ -208,7 +208,7 @@ export function TechStack() {
               width={368}
               height={368}
               className="w-[5rem] cursor-pointer"
-              src={`/logos/${tech.id}.svg`}
+              src={`profile/logos/${tech.id}.svg`}
               onClick={() => handleOpen(tech)}
             />
           ))}
@@ -233,7 +233,7 @@ export function TechStack() {
               width={368}
               height={368}
               className="w-[5rem] cursor-pointer"
-              src={`/logos/${selectedTech.id}.svg`}
+              src={`profile/logos/${selectedTech.id}.svg`}
              
             />
              {/* @ts-ignore */}
