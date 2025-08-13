@@ -84,18 +84,19 @@ function Hero() {
         </div>
 
         {/* Right circular image with fade animation */}
-        <div className="relative h-96 w-96 rounded-full overflow-hidden">
+        <div className="relative h-96 w-96 rounded-full overflow-hidden"> 
           {images.map((src, index) => (
-            <Image
-              key={index}
-              src={src}
-              alt={`Slide ${index}`}
-              width={1024}
-              height={1024}
-              className={`absolute top-0 left-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
-                index === currentImage ? "opacity-100" : "opacity-0"
-              }`}
-            />
+           <Image
+  alt={`Slide ${index}`}
+  width={1024}
+  height={1024}
+  src={`/image/hero${index + 1}.png`}
+  unoptimized={true} // <--- THIS IS THE FIX
+  className={`absolute top-0 left-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
+    index === currentImage ? "opacity-100" : "opacity-0"
+  }`}
+/>
+
           ))}
         </div>
       </div>
