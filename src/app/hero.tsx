@@ -8,19 +8,17 @@ import Socials from "@/components/socials";
 function Hero() {
   const [openDrawer, setOpenDrawer] = useState(false);
 
-  // Images array
+  // // Images array 
+  // // const images = ["image/hero1.png", "image/hero2.png", "image/hero3.png"];
+  // const [currentImage, setCurrentImage] = useState(0);
 
- 
-  const images = [`image/hero1.png`, `image/hero2.png`, `image/hero3.png`];
-  const [currentImage, setCurrentImage] = useState(0);
-
-  // Auto-change every 3s
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    },3000);
-    return () => clearInterval(interval);
-  }, []);
+  // // Auto-change every 3s
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentImage((prev) => (prev + 1) % images.length);
+  //   }, 3000);
+  //   return () => clearInterval(interval);
+  // }, [images.length]);
 
   return (
     <header className="bg-white p-8">
@@ -31,7 +29,6 @@ function Hero() {
           <Typography
             variant="lead"
             color="blue-gray"
-             placeholder=""
             onPointerEnterCapture={() => {}}
             onPointerLeaveCapture={() => {}}
             className="mb-4 xl:pr-28 !text-gray-500 inline-flex items-center gap-2"
@@ -42,7 +39,7 @@ function Hero() {
               width={12}
               height={12}
               className="w-6 h-auto"
-              src={`image/flag.svg`}
+              src="image/flag.svg"
             />
           </Typography>
  {/* @ts-ignore */}
@@ -50,7 +47,6 @@ function Hero() {
             variant="h1"
             color="blue-gray"
             className="mb-4 xl:pr-28 !text-gray-500"
-            placeholder=""
             onPointerEnterCapture={() => {}}
             onPointerLeaveCapture={() => {}}
           >
@@ -60,13 +56,12 @@ function Hero() {
           <Typography
             variant="lead"
             className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
-            placeholder=""
             onPointerEnterCapture={() => {}}
             onPointerLeaveCapture={() => {}}
           >
-            A passionate web developer based in South Africa. Here,
-            you&apos;ll get a glimpse of my journey in the world of web
-            development, where creativity meets functionality.
+            A passionate web developer based in South Africa. Here, get
+            a glimpse of my journey in the world of web development, where
+            creativity meets functionality.
           </Typography>
 
           <div className="flex gap-4">
@@ -74,7 +69,6 @@ function Hero() {
             <Button
               onClick={() => setOpenDrawer(true)}
               className="bg-black text-white"
-              placeholder=""
               onPointerEnterCapture={() => {}}
               onPointerLeaveCapture={() => {}}
             >
@@ -84,21 +78,32 @@ function Hero() {
         </div>
 
         {/* Right circular image with fade animation */}
-        <div className="relative h-96 w-96 rounded-full overflow-hidden"> 
+        {/* <div className="relative h-96 w-96 rounded-full overflow-hidden">
           {images.map((src, index) => (
-           <Image
-  alt={`Slide ${index}`}
-  width={1024}
-  height={1024}
-  src={`/image/hero${index + 1}.png`}
-  unoptimized={true} // <--- THIS IS THE FIX
-  className={`absolute top-0 left-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
-    index === currentImage ? "opacity-100" : "opacity-0"
-  }`}
-/>
-
+            <Image
+              key={index}
+              alt={`Slide ${index}`}
+              width={1024}
+              height={1024}
+              src={`image/hero${index + 1}.png`}
+              unoptimized={true}
+              className={`absolute top-0 left-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
+                index === currentImage ? "opacity-100" : "opacity-0" 
+              }`}
+            />
           ))}
-        </div>
+        </div> */}
+
+        <div className="relative h-96 w-96 rounded-full overflow-hidden">
+  <Image
+    alt="Hero"
+    width={1024}
+    height={1024}
+    src={"image/hero1.png"}
+    unoptimized={true}
+    className="h-full w-full object-cover"
+  />
+</div>
       </div>
 
       {/* Drawer */}
@@ -108,7 +113,6 @@ function Hero() {
         onClose={() => setOpenDrawer(false)}
         placement="left"
         size={500}
-        placeholder=""
         onPointerEnterCapture={() => {}}
         onPointerLeaveCapture={() => {}}
       >
@@ -118,7 +122,6 @@ function Hero() {
             variant="h5"
             color="blue-gray"
             className="mb-4"
-            placeholder=""
             onPointerEnterCapture={() => {}}
             onPointerLeaveCapture={() => {}}
           >
@@ -132,16 +135,16 @@ function Hero() {
                 variant="small"
                 color="gray"
                 className="font-normal text-gray-800"
-                placeholder=""
                 onPointerEnterCapture={() => {}}
                 onPointerLeaveCapture={() => {}}
               >
-                I am a highly motivated software developer with a strong foundation in 
-                various programming languages and technologies. From PHP, C#, and Angular
-                 to JavaScript, React, and React Native, I enjoy working with both front-end 
-                 and back-end technologies. My career has allowed me to lead projects, 
-                 work with diverse teams, and continuously expand my skill set through 
-                 hands-on experience and self-driven learning.
+                I am a highly motivated software developer with a strong
+                foundation in various programming languages and technologies.
+                From PHP, C#, and Angular to JavaScript, React, and React
+                Native, I enjoy working with both front-end and back-end
+                technologies. My career has allowed me to lead projects, work
+                with diverse teams, and continuously expand my skill set
+                through hands-on experience and self-driven learning.
               </Typography>
             </div>
 
@@ -151,7 +154,6 @@ function Hero() {
                 variant="small"
                 color="gray"
                 className="font-normal text-gray-800"
-                placeholder=""
                 onPointerEnterCapture={() => {}}
                 onPointerLeaveCapture={() => {}}
               >
@@ -169,7 +171,6 @@ function Hero() {
           <Button
             onClick={() => setOpenDrawer(false)}
             className="mt-4 bg-black text-white"
-            placeholder=""
             onPointerEnterCapture={() => {}}
             onPointerLeaveCapture={() => {}}
           >
