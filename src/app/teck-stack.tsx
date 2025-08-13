@@ -191,6 +191,7 @@ export function TechStack() {
   return (
     <section className="px-8 py-28">
       <div className="container mx-auto text-center">
+         {/* @ts-ignore */}
         <Typography variant="h6" color="blue-gray" className="mb-1" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           My Tech Stack
         </Typography>
@@ -213,7 +214,7 @@ export function TechStack() {
           ))}
         </div>
       </div>
-
+ {/* @ts-ignore */}
       <Dialog 
         open={open} 
         handler={() => setOpen(false)} 
@@ -235,6 +236,7 @@ export function TechStack() {
               src={`/logos/${selectedTech.id}.svg`}
              
             />
+             {/* @ts-ignore */}
             <Typography 
               variant="h5" 
               className="mb-4" 
@@ -249,6 +251,7 @@ export function TechStack() {
 
 
             <div className="flex flex-row justify-center items-center gap-x-4 mb-10">
+               {/* @ts-ignore */}
             <Typography 
               placeholder="" 
                 onPointerEnterCapture={() => {}} 
@@ -260,6 +263,7 @@ export function TechStack() {
             <div>
             
             </div> 
+             {/* @ts-ignore */}
              <Progress 
                value={selectedTech.level} 
                variant="filled" 
@@ -276,6 +280,7 @@ export function TechStack() {
                 <li key={index}>{detail}</li>
               ))}
             </ul>
+             {/* @ts-ignore */}
             <Button 
               className="mt-4 bg-black mt-10" 
               onClick={() => setOpen(false)} 

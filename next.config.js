@@ -2,7 +2,7 @@
 const nextConfig = {
   basePath: '/profile',
   assetPrefix: '/profile/',
-  output: 'export',
-};
+  output: 'export', // This enables static export
+}
 
 module.exports = nextConfig;

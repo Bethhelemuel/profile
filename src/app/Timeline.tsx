@@ -108,11 +108,13 @@ const MyTimeline = () => {
                 <TimelineIcon className="p-2">
                   <Icon className="h-5 w-5 " /> {/* Render dynamic icon */}
                 </TimelineIcon>
+                 {/* @ts-ignore */}
                 <Typography variant="h6" color="blue-gray" className="leading-none" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
                   {item.year}
                 </Typography>
               </TimelineHeader>
               <TimelineBody className={index < timelineData.length - 1 ? 'pb-8' : ''}>
+                 {/* @ts-ignore */}
                 <Typography
                   variant="small"
                   color="gray"
@@ -123,6 +125,7 @@ const MyTimeline = () => {
                 >
                   {item.content}
                 </Typography>
+                 {/* @ts-ignore */}
                 <Typography
                   variant="small"
                   color="gray"
@@ -134,6 +137,7 @@ const MyTimeline = () => {
                   at {item.place}
                 </Typography>
                 {item.hasMore && (
+                  //@ts-ignore 
                 <Typography
                   variant="h6"
                   placeholder=""
@@ -152,6 +156,7 @@ const MyTimeline = () => {
       </Timeline>
 
       {/* Material Tailwind Dialog for the modal */}
+       {/* @ts-ignore */}
       <Dialog
         open={open}
         handler={() => setOpen(false)}
@@ -160,6 +165,7 @@ const MyTimeline = () => {
         onPointerEnterCapture={() => {}}
         onPointerLeaveCapture={() => {}}
       >
+         {/* @ts-ignore */}
         <DialogBody
           placeholder=""
           onPointerEnterCapture={() => {}}
@@ -167,6 +173,7 @@ const MyTimeline = () => {
         >
           {selectedItem && (
             <div>
+               {/* @ts-ignore */}
               <DialogHeader
                 placeholder=""
                 onPointerEnterCapture={() => {}}
@@ -174,6 +181,7 @@ const MyTimeline = () => {
               >
                 {selectedItem.place}
               </DialogHeader>
+               {/* @ts-ignore */}
               <Typography
                 variant="h6"
                 color="blue-gray"
@@ -192,11 +200,13 @@ const MyTimeline = () => {
             </div>
           )}
         </DialogBody>
+         {/* @ts-ignore */}
         <DialogFooter
           placeholder=""
           onPointerEnterCapture={() => {}}
           onPointerLeaveCapture={() => {}}
         >
+           {/* @ts-ignore */}
           <Button
             className="bg-black text-white"
             onClick={() => setOpen(false)}

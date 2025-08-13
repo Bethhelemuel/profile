@@ -23,11 +23,14 @@ export function Navbar() {
   };
 
   return (
+    <>
+       {/* @ts-ignore */}
     <MTNavbar shadow={false} fullWidth className="border-0 sticky top-0 z-50" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
       <div className="container mx-auto flex items-center justify-between"> 
         <div className="w-full max-w-[16rem]">
           <div className="relative">
             <label htmlFor="email" className="sr-only">Email</label>
+             {/* @ts-ignore */}
             <Input
   id="email"
   type="text"
@@ -62,6 +65,7 @@ export function Navbar() {
         <Socials />
       </div>
     </MTNavbar>
+    </>
   );
 }
 

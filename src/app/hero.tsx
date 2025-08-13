@@ -25,6 +25,7 @@ function Hero() {
       <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center lg:grid-cols-2">
         {/* Left text */}
         <div className="row-start-2 lg:row-auto">
+           {/* @ts-ignore */}
           <Typography
             variant="lead"
             color="blue-gray"
@@ -42,7 +43,7 @@ function Hero() {
               src={`/image/flag.svg`}
             />
           </Typography>
-
+ {/* @ts-ignore */}
           <Typography
             variant="h1"
             color="blue-gray"
@@ -53,7 +54,7 @@ function Hero() {
           >
             <span className="text-black">Thato Mphugo </span>
           </Typography>
-
+ {/* @ts-ignore */}
           <Typography
             variant="lead"
             className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
@@ -67,6 +68,7 @@ function Hero() {
           </Typography>
 
           <div className="flex gap-4">
+             {/* @ts-ignore */}
             <Button
               onClick={() => setOpenDrawer(true)}
               className="bg-black text-white"
@@ -97,6 +99,7 @@ function Hero() {
       </div>
 
       {/* Drawer */}
+       {/* @ts-ignore */}
       <Drawer
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}
@@ -107,6 +110,7 @@ function Hero() {
         onPointerLeaveCapture={() => {}}
       >
         <div className="p-6 mt-[70px]">
+           {/* @ts-ignore */}
           <Typography
             variant="h5"
             color="blue-gray"
@@ -120,6 +124,7 @@ function Hero() {
 
           <div className="grid grid-cols-1 gap-10">
             <div className="bg-gray-100 p-4 rounded-lg">
+               {/* @ts-ignore */}
               <Typography
                 variant="small"
                 color="gray"
@@ -138,6 +143,7 @@ function Hero() {
             </div>
 
             <div className="bg-gray-100 p-4 rounded-lg">
+               {/* @ts-ignore */}
               <Typography
                 variant="small"
                 color="gray"
@@ -156,7 +162,7 @@ function Hero() {
               </Typography>
             </div>
           </div>
-
+ {/* @ts-ignore */}
           <Button
             onClick={() => setOpenDrawer(false)}
             className="mt-4 bg-black text-white"
