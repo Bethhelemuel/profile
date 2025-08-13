@@ -23,7 +23,7 @@ export function Navbar() {
   };
 
   return (
-    <MTNavbar shadow={false} fullWidth className="border-0 sticky top-0 z-50">
+    <MTNavbar shadow={false} fullWidth className="border-0 sticky top-0 z-50" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
       <div className="container mx-auto flex items-center justify-between"> 
         <div className="w-full max-w-[16rem]">
           <div className="relative">
@@ -35,6 +35,9 @@ export function Navbar() {
   value={email}
   disabled
   readOnly
+  onPointerEnterCapture={() => {}}
+  onPointerLeaveCapture={() => {}}
+  crossOrigin="anonymous"
 />
 
 

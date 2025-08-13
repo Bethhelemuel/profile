@@ -18,7 +18,7 @@ import { AcademicCapIcon, BriefcaseIcon } from '@heroicons/react/24/solid';
 
 const MyTimeline = () => {
   const [open, setOpen] = useState(false); // State for controlling the dialog
-  const [selectedItem, setSelectedItem] = useState(null); // State for the selected timeline item
+  const [selectedItem, setSelectedItem] = useState<typeof timelineData[number] | null>(null); // State for the selected timeline item
 
   const timelineData = [
     {
@@ -91,7 +91,7 @@ const MyTimeline = () => {
     },
   ];
 
-  const handleMoreClick = (item) => {
+  const handleMoreClick = (item: typeof timelineData[number]) => {
     setSelectedItem(item); // Set the selected item for the modal
     setOpen(true); // Open the modal
   };
@@ -108,26 +108,42 @@ const MyTimeline = () => {
                 <TimelineIcon className="p-2">
                   <Icon className="h-5 w-5 " /> {/* Render dynamic icon */}
                 </TimelineIcon>
-                <Typography variant="h6" color="blue-gray" className="leading-none">
+                <Typography variant="h6" color="blue-gray" className="leading-none" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
                   {item.year}
                 </Typography>
               </TimelineHeader>
               <TimelineBody className={index < timelineData.length - 1 ? 'pb-8' : ''}>
-                <Typography variant="small" color="gray" className="font-normal text-gray-800">
+                <Typography
+                  variant="small"
+                  color="gray"
+                  className="font-normal text-gray-800"
+                  placeholder=""
+                  onPointerEnterCapture={() => {}}
+                  onPointerLeaveCapture={() => {}}
+                >
                   {item.content}
                 </Typography>
-                <Typography variant="small" color="gray" className="font-normal text-gray-600">
+                <Typography
+                  variant="small"
+                  color="gray"
+                  className="font-normal text-gray-600"
+                  placeholder=""
+                  onPointerEnterCapture={() => {}}
+                  onPointerLeaveCapture={() => {}}
+                >
                   at {item.place}
                 </Typography>
                 {item.hasMore && (
-                  <Typography
-                    variant="h6"
-                 
-                    className="leading-none cursor-pointer mt-4 text-light-blue-900"
-                    onClick={() => handleMoreClick(item)} // Open the modal on click
-                  >
-                    More...
-                  </Typography>
+                <Typography
+                  variant="h6"
+                  placeholder=""
+                  onPointerEnterCapture={() => {}}
+                  onPointerLeaveCapture={() => {}}
+                  className="leading-none cursor-pointer mt-4 text-light-blue-900"
+                  onClick={() => handleMoreClick(item)} // Open the modal on click
+                >
+                  More...
+                </Typography>
                 )}
               </TimelineBody>
             </TimelineItem>
@@ -136,12 +152,36 @@ const MyTimeline = () => {
       </Timeline>
 
       {/* Material Tailwind Dialog for the modal */}
-      <Dialog open={open} handler={() => setOpen(false)} size="lg">
-        <DialogBody>
+      <Dialog
+        open={open}
+        handler={() => setOpen(false)}
+        size="lg"
+        placeholder=""
+        onPointerEnterCapture={() => {}}
+        onPointerLeaveCapture={() => {}}
+      >
+        <DialogBody
+          placeholder=""
+          onPointerEnterCapture={() => {}}
+          onPointerLeaveCapture={() => {}}
+        >
           {selectedItem && (
             <div>
-              <DialogHeader>{selectedItem.place}</DialogHeader>
-              <Typography variant="h6" color="blue-gray" className="mb-4 ml-4">
+              <DialogHeader
+                placeholder=""
+                onPointerEnterCapture={() => {}}
+                onPointerLeaveCapture={() => {}}
+              >
+                {selectedItem.place}
+              </DialogHeader>
+              <Typography
+                variant="h6"
+                color="blue-gray"
+                className="mb-4 ml-4"
+                placeholder=""
+                onPointerEnterCapture={() => {}}
+                onPointerLeaveCapture={() => {}}
+              >
                 {selectedItem.year} - {selectedItem.content}
               </Typography> 
               <ul className="list-disc pl-5 ml-4">
@@ -152,10 +192,17 @@ const MyTimeline = () => {
             </div>
           )}
         </DialogBody>
-        <DialogFooter>
+        <DialogFooter
+          placeholder=""
+          onPointerEnterCapture={() => {}}
+          onPointerLeaveCapture={() => {}}
+        >
           <Button
             className="bg-black text-white"
             onClick={() => setOpen(false)}
+            placeholder=""
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
           >
             Close
           </Button>

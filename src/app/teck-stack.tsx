@@ -176,7 +176,12 @@ const CLIENTS = [
 
 export function TechStack() {
   const [open, setOpen] = useState(false);
-  const [selectedTech, setSelectedTech] = useState(null);
+  const [selectedTech, setSelectedTech] = useState<{
+    id: string;
+    title: string;
+    level: number;
+    details: string[];
+  } | null>(null);
 
   const handleOpen = (tech:any) => {
     setSelectedTech(tech);
@@ -186,7 +191,7 @@ export function TechStack() {
   return (
     <section className="px-8 py-28">
       <div className="container mx-auto text-center">
-        <Typography variant="h6" color="blue-gray" className="mb-1">
+        <Typography variant="h6" color="blue-gray" className="mb-1" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           My Tech Stack
         </Typography>
         <p className="font-bold text-gray-400 text-[11px] mb-8 inline-flex items-center">
@@ -209,7 +214,15 @@ export function TechStack() {
         </div>
       </div>
 
-      <Dialog open={open} handler={() => setOpen(false)} size="sm" className="p-6 text-black">
+      <Dialog 
+        open={open} 
+        handler={() => setOpen(false)} 
+        size="sm" 
+        className="p-6 text-black" 
+        placeholder="" 
+        onPointerEnterCapture={() => {}} 
+        onPointerLeaveCapture={() => {}}
+      >
         {selectedTech && (
           <div > 
           <div className="flex flex-row justify-center items-center gap-x-4 mb-10">
@@ -222,7 +235,13 @@ export function TechStack() {
               src={`/logos/${selectedTech.id}.svg`}
              
             />
-            <Typography variant="h5" className="mb-4">
+            <Typography 
+              variant="h5" 
+              className="mb-4" 
+              placeholder="" 
+              onPointerEnterCapture={() => {}} 
+              onPointerLeaveCapture={() => {}}
+            >
               {selectedTech.title}
             </Typography>
        
@@ -230,13 +249,24 @@ export function TechStack() {
 
 
             <div className="flex flex-row justify-center items-center gap-x-4 mb-10">
-            <Typography variant="h5" className=""> 
+            <Typography 
+              placeholder="" 
+                onPointerEnterCapture={() => {}} 
+                onPointerLeaveCapture={() => {}}
+            variant="h5" className=""
+            > 
              Level: 
             </Typography>
             <div>
             
             </div> 
-             <Progress value={selectedTech.level} variant="filled" />
+             <Progress 
+               value={selectedTech.level} 
+               variant="filled" 
+               placeholder="" 
+               onPointerEnterCapture={() => {}} 
+               onPointerLeaveCapture={() => {}} 
+             />
             </div>
 
           
@@ -246,7 +276,13 @@ export function TechStack() {
                 <li key={index}>{detail}</li>
               ))}
             </ul>
-            <Button className="mt-4 bg-black mt-10" onClick={() => setOpen(false)}>
+            <Button 
+              className="mt-4 bg-black mt-10" 
+              onClick={() => setOpen(false)} 
+              placeholder="" 
+              onPointerEnterCapture={() => {}} 
+              onPointerLeaveCapture={() => {}}
+            >
               Close
             </Button>
           </div>

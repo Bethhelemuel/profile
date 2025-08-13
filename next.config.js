@@ -1,20 +1,17 @@
 /** @type {import('next').NextConfig} */
-
-const isProd = process.env.NODE_ENV === 'production';
-
 const nextConfig = {
-  output: 'export', // Needed for static export
-  basePath: isProd ? '/profile' : '', // Repo name for GitHub Pages
-  assetPrefix: isProd ? '/profile/' : '', // Ensures assets load correctly
+  output: "export", // Required for static export
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
         hostname: "**",
       },
     ],
-    unoptimized: true // Required when using static export for images
   },
+  basePath: "/profile", // 👈 Repo name
+  assetPrefix: "/profile/",
 };
 
 module.exports = nextConfig;

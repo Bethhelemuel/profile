@@ -1,8 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Drawer } from "@material-tailwind/react";
-import { Card } from "@material-tailwind/react";
-import { Button } from "@material-tailwind/react";
+import { Drawer, Card, Button } from "@material-tailwind/react";
 
 const certifications = [
   {
@@ -56,35 +54,34 @@ const certifications = [
       "User authentication and authorization",
     ],
   },
-
-    {
+  {
     id: 5,
     image: "/certifications/advanced-angular.png",
     pdf: "/certifications/advanced-angular.pdf",
     title: "Advanced Angular Development",
     link: "https://coursera.org/verify/2D7X7SOZP6CE",
     info: [
-        "Angular architecture and core concepts",
-        "Components and component interaction",
-        "Templates, data binding, and interpolation",
-        "Directives: structural and attribute",
-        "Services and dependency injection (DI)",
-        "Routing, route guards, and lazy loading",
-        "Forms: Template-driven and Reactive Forms",
-        "RxJS basics and reactive programming in Angular",
-        "HttpClient and API communication",
-        "Authentication and authorization",
-        "Change detection strategies",
-        "State management (NgRx or services)",
-        "Testing: unit tests and end-to-end tests",
-        "Performance optimization",
-        "Deployment strategies",
+      "Angular architecture and core concepts",
+      "Components and component interaction",
+      "Templates, data binding, and interpolation",
+      "Directives: structural and attribute",
+      "Services and dependency injection (DI)",
+      "Routing, route guards, and lazy loading",
+      "Forms: Template-driven and Reactive Forms",
+      "RxJS basics and reactive programming in Angular",
+      "HttpClient and API communication",
+      "Authentication and authorization",
+      "Change detection strategies",
+      "State management (NgRx or services)",
+      "Testing: unit tests and end-to-end tests",
+      "Performance optimization",
+      "Deployment strategies",
     ],
   },
 ];
 
 export default function Certifications() {
-  const [selectedCertification, setSelectedCertification] = useState(null);
+  const [selectedCertification, setSelectedCertification] = useState<null | typeof certifications[0]>(null);
 
   return (
     <div className="p-[50px]">
@@ -95,6 +92,9 @@ export default function Certifications() {
             key={cert.id}
             className="cursor-pointer hover:shadow-lg transition p-2"
             onClick={() => setSelectedCertification(cert)}
+            placeholder=""
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
           >
             <img
               src={cert.image}
@@ -116,6 +116,9 @@ export default function Certifications() {
         onClose={() => setSelectedCertification(null)}
         placement="right"
         size={500}
+        placeholder=""
+        onPointerEnterCapture={() => {}}
+        onPointerLeaveCapture={() => {}}
       >
         <div className="p-10 mt-[70px]">
           {selectedCertification && (
@@ -131,7 +134,9 @@ export default function Certifications() {
               <p className="font-bold mt-4 text-[18px]">Description</p>
               <ul className="list-disc list-inside">
                 {selectedCertification.info.map((item, index) => (
-                  <li className="text-[11px]" key={index}>{item}</li>
+                  <li className="text-[11px]" key={index}>
+                    {item}
+                  </li>
                 ))}
               </ul>
               <a
@@ -145,6 +150,9 @@ export default function Certifications() {
               <Button
                 onClick={() => setSelectedCertification(null)}
                 className="mt-4 bg-black text-white"
+                placeholder=""
+                onPointerEnterCapture={() => {}}
+                onPointerLeaveCapture={() => {}}
               >
                 Close
               </Button>

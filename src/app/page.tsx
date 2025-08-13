@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 // Components
-import { Navbar, Footer } from "@/components";
+import { Navbar } from "@/components";
 
 // Sections
 import Hero from "./hero";
@@ -72,7 +72,7 @@ export default function Portfolio() {
           </FadeInSection>
         </article>
       </main>
-      {/* <Footer /> */}
+  
     </>
   );
 }

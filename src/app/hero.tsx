@@ -28,6 +28,9 @@ function Hero() {
           <Typography
             variant="lead"
             color="blue-gray"
+             placeholder=""
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
             className="mb-4 xl:pr-28 !text-gray-500 inline-flex items-center gap-2"
           >
             Full stack developer
@@ -44,6 +47,9 @@ function Hero() {
             variant="h1"
             color="blue-gray"
             className="mb-4 xl:pr-28 !text-gray-500"
+            placeholder=""
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
           >
             <span className="text-black">Thato Mphugo </span>
           </Typography>
@@ -51,6 +57,9 @@ function Hero() {
           <Typography
             variant="lead"
             className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
+            placeholder=""
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
           >
             A passionate web developer based in South Africa. Here,
             you&apos;ll get a glimpse of my journey in the world of web
@@ -61,6 +70,9 @@ function Hero() {
             <Button
               onClick={() => setOpenDrawer(true)}
               className="bg-black text-white"
+              placeholder=""
+              onPointerEnterCapture={() => {}}
+              onPointerLeaveCapture={() => {}}
             >
               More
             </Button>
@@ -90,9 +102,19 @@ function Hero() {
         onClose={() => setOpenDrawer(false)}
         placement="left"
         size={500}
+        placeholder=""
+        onPointerEnterCapture={() => {}}
+        onPointerLeaveCapture={() => {}}
       >
         <div className="p-6 mt-[70px]">
-          <Typography variant="h5" color="blue-gray" className="mb-4">
+          <Typography
+            variant="h5"
+            color="blue-gray"
+            className="mb-4"
+            placeholder=""
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
+          >
             About me
           </Typography>
 
@@ -102,6 +124,9 @@ function Hero() {
                 variant="small"
                 color="gray"
                 className="font-normal text-gray-800"
+                placeholder=""
+                onPointerEnterCapture={() => {}}
+                onPointerLeaveCapture={() => {}}
               >
                 I am a highly motivated software developer with a strong foundation in 
                 various programming languages and technologies. From PHP, C#, and Angular
@@ -117,6 +142,9 @@ function Hero() {
                 variant="small"
                 color="gray"
                 className="font-normal text-gray-800"
+                placeholder=""
+                onPointerEnterCapture={() => {}}
+                onPointerLeaveCapture={() => {}}
               >
                 I believe in continuous improvement, whether refining existing
                 skills or learning new technologies. With experience in SQL,
@@ -132,6 +160,9 @@ function Hero() {
           <Button
             onClick={() => setOpenDrawer(false)}
             className="mt-4 bg-black text-white"
+            placeholder=""
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
           >
             Close
           </Button>
