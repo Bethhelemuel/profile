@@ -6,12 +6,10 @@
   "license": "MIT",
   "homepage": "https://Bethhelemuel.github.io/profile",
   "scripts": {
-    "build": "next build && next export -o docs",
     "dev": "next dev",
+  "build": "next build && next export -o docs",
     "start": "next start",
-    "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d docs"
+  "deploy": "gh-pages -d docs"
   },
   "dependencies": {
     "@heroicons/react": "2.0.18",
