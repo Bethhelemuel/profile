@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/profile",      // Keep this if your repo is github.com/USERNAME/profile
-  output: "export",          // Required for static export
-  trailingSlash: true,       // Ensures paths end with / for GitHub Pages
+  distDir: 'next', // changes the folder name from .next to next
+  assetPrefix: './', // ensures relative paths for GitHub Pages
+  output: 'export', // needed if you are using static export
 };
 
 module.exports = nextConfig;
