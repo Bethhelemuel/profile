@@ -9,7 +9,7 @@ function Hero() {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   // Images array
-  const images = ["profile/image/hero1.png", "profile/image/hero2.png", "profile/image/hero3.png"];
+  const images = ["/image/hero1.png", "/image/hero2.png", "/image/hero3.png"];
   const [currentImage, setCurrentImage] = useState(0);
 
   // Auto-change every 3s
