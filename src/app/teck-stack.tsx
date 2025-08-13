@@ -196,8 +196,8 @@ export function TechStack() {
           My Tech Stack
         </Typography>
         <p className="font-bold text-gray-400 text-[11px] mb-8 inline-flex items-center">
-          click for more info 
-          <Image src="/image/click.gif" width={20} height={20} alt="click" className="ml-2" />
+          click for more info  
+          <Image src="image/click.gif" width={20} height={20} alt="click" className="ml-2" />
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-6"> 
