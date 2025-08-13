@@ -208,7 +208,7 @@ export function TechStack() {
               width={368}
               height={368}
               className="w-[5rem] cursor-pointer"
-              src={`/logos/${tech.id}.svg`}
+              src={`profile/logos/${tech.id}.svg`}
               onClick={() => handleOpen(tech)}
             />
           ))}
@@ -233,7 +233,7 @@ export function TechStack() {
               width={368}
               height={368}
               className="w-[5rem] cursor-pointer"
-              src={`/logos/${selectedTech.id}.svg`}
+              src={`profile/logos/${selectedTech.id}.svg`}
              
             />
              {/* @ts-ignore */}
