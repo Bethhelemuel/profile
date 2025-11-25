@@ -77,7 +77,25 @@ const certifications = [
       "Performance optimization",
       "Deployment strategies",
     ],
+    
   }, 
+   {
+id: 6,
+image: "certifications/containers.png",
+pdf: "/certifications/containers.pdf",
+title: "Containers w/ Docker, Kubernetes & OpenShift",
+link: "https://coursera.org/share/e7cb33650ca9b178d4198662510025f2",
+info: [
+  "Docker: building and managing containers",
+  "Docker Compose for multi-container apps",
+  "Kubernetes: pods, deployments, and services",
+  "ConfigMaps, Secrets, and environment setup",
+  "Scaling, rolling updates, and health checks",
+  "OpenShift projects, builds, and security (RBAC)",
+  "Deployment strategies and CI/CD integration",
+  "Monitoring, logging, and resource management"
+],
+  }
 ];
 
 export default function Certifications() {

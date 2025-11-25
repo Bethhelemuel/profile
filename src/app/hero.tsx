@@ -1,3 +1,4 @@
+// ...existing code...
 "use client";
 
 import { useState, useEffect } from "react";
@@ -8,24 +9,24 @@ import Socials from "@/components/socials";
 function Hero() {
   const [openDrawer, setOpenDrawer] = useState(false);
 
-  // // Images array 
-  // // const images = ["image/hero1.png", "image/hero2.png", "image/hero3.png"];
-  // const [currentImage, setCurrentImage] = useState(0);
+  // Images array 
+  const images = ["/image/hero1.png", "/image/hero2.png", "/image/hero3.png"];
+  const [currentImage, setCurrentImage] = useState(0);
 
-  // // Auto-change every 3s
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentImage((prev) => (prev + 1) % images.length);
-  //   }, 3000);
-  //   return () => clearInterval(interval);
-  // }, [images.length]);
+  // Auto-change every 3s
+  useEffect(() => { 
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
     <header className="bg-white p-8">
       <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center lg:grid-cols-2">
         {/* Left text */}
         <div className="row-start-2 lg:row-auto">
-           {/* @ts-ignore */}
+          {/* @ts-ignore */}
           <Typography
             variant="lead"
             color="blue-gray"
@@ -39,10 +40,10 @@ function Hero() {
               width={12}
               height={12}
               className="w-6 h-auto"
-              src="image/flag.svg"
+              src="/image/flag.svg"
             />
           </Typography>
- {/* @ts-ignore */}
+          {/* @ts-ignore */}
           <Typography
             variant="h1"
             color="blue-gray"
@@ -52,7 +53,7 @@ function Hero() {
           >
             <span className="text-black">Thato Mphugo </span>
           </Typography>
- {/* @ts-ignore */}
+          {/* @ts-ignore */}
           <Typography
             variant="lead"
             className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
@@ -65,7 +66,7 @@ function Hero() {
           </Typography>
 
           <div className="flex gap-4">
-             {/* @ts-ignore */}
+            {/* @ts-ignore */}
             <Button
               onClick={() => setOpenDrawer(true)}
               className="bg-black text-white"
@@ -78,36 +79,26 @@ function Hero() {
         </div>
 
         {/* Right circular image with fade animation */}
-        {/* <div className="relative h-96 w-96 rounded-full overflow-hidden">
+        <div className="relative h-96 w-96 rounded-full overflow-hidden">
           {images.map((src, index) => (
             <Image
-              key={index}
-              alt={`Slide ${index}`}
+              key={src}
+              alt={`Slide ${index + 1}`}
+              src={src}
+              unoptimized={true}
               width={1024}
               height={1024}
-              src={`image/hero${index + 1}.png`}
-              unoptimized={true}
               className={`absolute top-0 left-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
-                index === currentImage ? "opacity-100" : "opacity-0" 
+                index === currentImage ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
+              priority={index === 0} // preload first slide
             />
           ))}
-        </div> */}
-
-        <div className="relative h-96 w-96 rounded-full overflow-hidden">
-  <Image
-    alt="Hero"
-    width={1024}
-    height={1024}
-    src={"image/hero1.png"}
-    unoptimized={true}
-    className="h-full w-full object-cover"
-  />
-</div>
+        </div>
       </div>
 
       {/* Drawer */}
-       {/* @ts-ignore */}
+      {/* @ts-ignore */}
       <Drawer
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}
@@ -117,7 +108,7 @@ function Hero() {
         onPointerLeaveCapture={() => {}}
       >
         <div className="p-6 mt-[70px]">
-           {/* @ts-ignore */}
+          {/* @ts-ignore */}
           <Typography
             variant="h5"
             color="blue-gray"
@@ -130,7 +121,7 @@ function Hero() {
 
           <div className="grid grid-cols-1 gap-10">
             <div className="bg-gray-100 p-4 rounded-lg">
-               {/* @ts-ignore */}
+              {/* @ts-ignore */}
               <Typography
                 variant="small"
                 color="gray"
@@ -149,7 +140,7 @@ function Hero() {
             </div>
 
             <div className="bg-gray-100 p-4 rounded-lg">
-               {/* @ts-ignore */}
+              {/* @ts-ignore */}
               <Typography
                 variant="small"
                 color="gray"
@@ -167,7 +158,7 @@ function Hero() {
               </Typography>
             </div>
           </div>
- {/* @ts-ignore */}
+          {/* @ts-ignore */}
           <Button
             onClick={() => setOpenDrawer(false)}
             className="mt-4 bg-black text-white"

@@ -20,76 +20,78 @@ const MyTimeline = () => {
   const [open, setOpen] = useState(false); // State for controlling the dialog
   const [selectedItem, setSelectedItem] = useState<typeof timelineData[number] | null>(null); // State for the selected timeline item
 
-  const timelineData = [
-    {
-      year: 2014,
-      hasMore: false,
-      content: '(NSC) National Senior Certificate',
-      place: 'Hoerskool Voortrekkerhoogte',
-      icon: AcademicCapIcon,
-    },
-    {
-      year: 2018,
-      hasMore: false,
-      content: 'Diploma In Information Technology (Network Engineering)',
-      place: 'Richfield Graduate Institute of Technology',
-      icon: AcademicCapIcon,
-    },
-    {
-      year: 2019,
-      hasMore: true,
-      content: 'Junior PHP Developer',
-      place: 'Taly Computer Solutions',
-      icon: BriefcaseIcon,
-      list: [
-        'Develop new systems and applications.',
-        'Maintain and improve existing systems and applications',
-        'Troubleshooting issues and problems.',
-        'System testing.',
-        'System documentation',
-        'Updating legacy applications user interface and refactoring code',
-        'Database creation and management',
-        'Updating and Maintain code using git',
-        'Responding to customer emails on enquires or bugs',
-        'Assisting senior developers on projects',
-      ],
-    },
-    {
-      year: 2021,
-      hasMore: true,
-      content: 'Front End Developer',
-      place: 'Amazizi Consultation',
-      icon: BriefcaseIcon,
-      list: [
-        'Convert Figma designs to web',
-        'Maintain and update existing designs',
-        'Ensure web designs are responsive',
-        'Fix design bugs',
-        'Develop and prototype new screens',
-        'Process json data from backend to frontend view',
-        'Develop animated navigation ',
-      ],
-    },
-    {
-      year: 2022,
-      hasMore: true,
-      content: 'Full Stack Developer',
-      place: 'PayDay Software Systems',
-      icon: BriefcaseIcon,
-      list: [
-        'Database Management ',
-        'Server administration ',
-        'Setting up and monitoring the GIT server',
-        'Unit testing',
-        'Develop and maintain software',
-        'Maintaining ZK access control software and hardware configuration',
-        'Reverse engineering legacy desktop applications to web',
-        'Lead developer for 2 projects',
-        'Documentation of code/classes',
-        'Maintain mobile time and attendance app for Android/IOS',
-      ],
-    },
-  ];
+const timelineData = [
+  {
+    year: 2022,
+    hasMore: true,
+    content: 'Full Stack Developer',
+    place: 'PayDay Software Systems',
+    icon: BriefcaseIcon,
+    list: [
+      'Led development for 2 major projects from concept to deployment',
+      'Created and maintained internal Bonobo Git server',
+      'Reverse-engineered legacy desktop applications into fully functional web systems using C#, Angular, and SQL',
+      'Assisted in Laravel applications development',
+      'Managed databases, performed SQL optimizations, and ensured data integrity',
+      'Supported access control systems and configured hardware integration with in-house software',
+      'Maintained existing mobile time-and-attendance app for Android/iOS',
+      'Wrote unit tests, documentation, and contributed to system designs',
+      'Managed IIS server and published .NET applications',
+      'Developed supporting APIs for integration with other systems using ASP.NET Core and Node.js',
+      'Integrated client APIs into existing systems'
+    ],
+  },
+  {
+    year: 2021,
+    hasMore: true,
+    content: 'Front-End Developer',
+    place: 'Amazizi Consultation',
+    icon: BriefcaseIcon,
+    list: [
+      'Converted Figma designs into responsive web pages',
+      'Updated and improved UI layouts and implemented animated navigation effects',
+      'Processed JSON data from backend services and mapped it to UI views',
+      'Designed and prototyped new screens for client applications',
+      'Resolved UI bugs and improved component interactivity using JavaScript',
+      'Developed admin panels using React or Angular',
+      'Integrated existing APIs into newly created UI',
+      'Created interfaces for mobile applications using React Native (Expo)',
+      'Structured and improved application flow to ensure smooth navigation, state management, and user interactions'
+    ],
+  },
+  {
+    year: 2019,
+    hasMore: true,
+    content: 'Junior PHP Developer',
+    place: 'Taly Computer Solutions',
+    icon: BriefcaseIcon,
+    list: [
+      'Developed new systems and improved existing applications using PHP and OOP methodologies',
+      'Refactored legacy code and modernized UI components for improved performance and user experience',
+      'Created and managed databases, including stored procedures and complex MySQL queries',
+      'Performed software testing, troubleshooting, and system documentation',
+      'Managed code updates using Git and responded to client bug reports',
+      'Collaborated with senior developers to deliver high-quality solutions',
+      'Developed interactive navigation and dynamic UI elements using vanilla HTML, CSS, and JavaScript'
+    ],
+  },
+  {
+    year: 2018,
+    hasMore: false,
+    content: 'Diploma in Information Technology (Network Engineering)',
+    place: 'Richfield Graduate Institute of Technology',
+    icon: AcademicCapIcon,
+  },
+  {
+    year: 2014,
+    hasMore: false,
+    content: '(NSC) National Senior Certificate',
+    place: 'Hoërskool Voortrekkerhoogte',
+    icon: AcademicCapIcon,
+  },
+];
+
+
 
   const handleMoreClick = (item: typeof timelineData[number]) => {
     setSelectedItem(item); // Set the selected item for the modal

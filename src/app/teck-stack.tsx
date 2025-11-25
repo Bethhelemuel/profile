@@ -60,7 +60,33 @@ const CLIENTS = [
     level: 80,
     details: ["Core JavaScript Fundamentals", "DOM Manipulation & Events", "Asynchronous JavaScript","Object-Oriented Programming (OOP)","Frontend Framework Basics","Working with APIs (AJAX & Fetch)","Modern ES6+ JavaScript Features","Error Handling & Debugging"],
   },
+{
+  id: "docker",
+  title: "Docker",
+  level: 40,
+  details: [
+    "Understanding Containers vs VMs",
+    "Building and Running Containers",
+    "Docker Images and Dockerfile Basics",
+    "Docker Compose for Multi-container Apps",
+    "Container Networking and Volumes",
+    "Basic Troubleshooting and Logs"
+  ],
+},
 
+{
+  id: "kubernetes",
+  title: "Kubernetes",
+  level: 40,
+  details: [
+    "Kubernetes Architecture: Pods, Nodes, Deployments",
+    "Creating and Managing Deployments",
+    "Services, ConfigMaps, and Secrets",
+    "Scaling and Rolling Updates",
+    "Health Checks and Monitoring",
+    "Basic Resource Management (CPU & Memory)"
+  ],
+},
   {
     id: "mysql",
     title: "MySql",
