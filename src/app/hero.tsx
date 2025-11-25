@@ -9,10 +9,11 @@ import Socials from "@/components/socials";
 function Hero() {
   const [openDrawer, setOpenDrawer] = useState(false);
 
-  // Images array 
-  const images = ["/image/hero1.png", "/image/hero2.png", "/image/hero3.png"];
+  // Images array  
+  const base="bethhelemuel.github.io/profile"
+  const images = [base+"/image/hero1.png", base+"/image/hero2.png",base+ "/image/hero3.png"];
   const [currentImage, setCurrentImage] = useState(0);
-
+ 
   // Auto-change every 3s
   useEffect(() => { 
     const interval = setInterval(() => {
@@ -40,7 +41,7 @@ function Hero() {
               width={12}
               height={12}
               className="w-6 h-auto"
-              src="/image/flag.svg"
+              src="https://bethhelemuel.github.io/profile/image/flag.svg"
             />
           </Typography>
           {/* @ts-ignore */}
