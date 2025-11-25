@@ -10,7 +10,7 @@ function Hero() {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   // Images array  
-  const base="bethhelemuel.github.io/profile"
+  const base="https://bethhelemuel.github.io/profile/"
   const images = [base+"/image/hero1.png", base+"/image/hero2.png",base+ "/image/hero3.png"];
   const [currentImage, setCurrentImage] = useState(0);
  
@@ -44,7 +44,7 @@ function Hero() {
               src="https://bethhelemuel.github.io/profile/image/flag.svg"
             />
           </Typography>
-          {/* @ts-ignore */}
+          {/* @ts-ignore */} 
           <Typography
             variant="h1"
             color="blue-gray"
