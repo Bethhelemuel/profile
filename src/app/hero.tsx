@@ -61,9 +61,7 @@ function Hero() {
             onPointerEnterCapture={() => {}}
             onPointerLeaveCapture={() => {}}
           >
-            A passionate web developer based in South Africa. Here, get
-            a glimpse of my journey in the world of web development, where
-            creativity meets functionality.
+          My work centers on creating web applications that are practical, efficient, and built with clean architecture in mind.
           </Typography>
 
           <div className="flex gap-4">
@@ -130,13 +128,8 @@ function Hero() {
                 onPointerEnterCapture={() => {}}
                 onPointerLeaveCapture={() => {}}
               >
-                I am a highly motivated software developer with a strong
-                foundation in various programming languages and technologies.
-                From PHP, C#, and Angular to JavaScript, React, and React
-                Native, I enjoy working with both front-end and back-end
-                technologies. My career has allowed me to lead projects, work
-                with diverse teams, and continuously expand my skill set
-                through hands-on experience and self-driven learning.
+            I enjoy building practical services, learning as I go, and getting
+             better with every project.
               </Typography>
             </div>
 
@@ -149,13 +142,10 @@ function Hero() {
                 onPointerEnterCapture={() => {}}
                 onPointerLeaveCapture={() => {}}
               >
-                I believe in continuous improvement, whether refining existing
-                skills or learning new technologies. With experience in SQL,
-                SQLite, and Android development, I am dedicated to enhancing my
-                programming expertise. Currently, I am focused on deepening my
-                knowledge of React Native, expanding my work with mobile
-                applications, and exploring AI to stay adaptable to emerging
-                technologies in the software development world.
+                I believe in continuous improvement, always refining my skills and
+                 learning new approaches. I stay committed to growing through hands-on
+                  experience and challenges, and I’m focused on expanding my abilities 
+                  to adapt and excel in a constantly evolving field.
               </Typography>
             </div>
           </div>

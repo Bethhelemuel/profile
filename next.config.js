@@ -8,9 +8,8 @@ const nextConfig = {
   assetPrefix: isProd ? '/profile/' : '',
   output: 'export',
   trailingSlash: true,
-  turbopack: {
-    // ensure an absolute path to the project root
-    root: path.resolve(__dirname),
+  images: {
+    unoptimized: true,
   },
 };
 

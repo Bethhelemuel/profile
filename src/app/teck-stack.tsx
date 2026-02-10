@@ -11,24 +11,20 @@ const CLIENTS = [
     level: 60,
     details: ["UI/UX Design", "Prototyping", "Artboards & Layouts","Components & Assets"],
   },
+ 
   {
-    id: "angular",
-    title: "Angular",
-    level: 70,
-    details: ["Component Communication", "Services & Dependency Injection", "Routing & Navigation","tailwind","Forms & Validation","RxJS & Observables"],
-  }, 
+    id: "html",
+    title: "HTML",
+    level: 90,
+    details: ["Core HTML Knowledge", "Semantic Markup", "Forms & User Input Handling","Responsive & Mobile-Friendly Design","JavaScript & CSS Integration"],
+  },
   {
     id: "css",
     title: "CSS",
     level: 80,
     details: ["Box Model & Layouts", "SCSS","Responsive Design", "Animations & Transitions","Utility & Frameworks etc tailwind,bootstrap,material tailwind","Cross-Browser Compatibility"],
   },
-  {
-    id: "next",
-    title: "Next.js",
-    level: 40,
-    details: ["Routing & Navigation", "Styling & Theming", "Authentication & Authorization","Data Fetching Techniques","Static & Dynamic Content Management","API Routes & Backend Integration","Deployment & Hosting"],
-  },
+
   {
     id: "figma",
     title: "Figma",
@@ -41,18 +37,19 @@ const CLIENTS = [
     level: 80,
     details: ["Branching & Merging", "Collaboration & Remote Repositories", "Commit Management & History"],
   },
+    { 
+    id: "angular",
+    title: "Angular",
+    level: 70,
+    details: ["Component Communication", "Services & Dependency Injection", "Routing & Navigation","tailwind","Forms & Validation","RxJS & Observables"],
+  },
   {
     id: "dot-net",
     title: ".NET",
     level: 45,
     details: ["RESTful APIs & Web Services", "Authentication & Authorization", "Object-Oriented Programming (OOP)"],
   },
-  {
-    id: "html",
-    title: "HTML",
-    level: 90,
-    details: ["Core HTML Knowledge", "Semantic Markup", "Forms & User Input Handling","Responsive & Mobile-Friendly Design","JavaScript & CSS Integration"],
-  },
+
 
   {
     id: "javascript",
@@ -60,10 +57,10 @@ const CLIENTS = [
     level: 80,
     details: ["Core JavaScript Fundamentals", "DOM Manipulation & Events", "Asynchronous JavaScript","Object-Oriented Programming (OOP)","Frontend Framework Basics","Working with APIs (AJAX & Fetch)","Modern ES6+ JavaScript Features","Error Handling & Debugging"],
   },
-{
+  {
   id: "docker",
   title: "Docker",
-  level: 40,
+  level: 30,
   details: [
     "Understanding Containers vs VMs",
     "Building and Running Containers",
@@ -77,7 +74,7 @@ const CLIENTS = [
 {
   id: "kubernetes",
   title: "Kubernetes",
-  level: 40,
+  level: 30,
   details: [
     "Kubernetes Architecture: Pods, Nodes, Deployments",
     "Creating and Managing Deployments",
@@ -94,12 +91,7 @@ const CLIENTS = [
     details: ["Core SQL Concepts", "Querying Data", " Advanced Query Optimization","Stored Procedures & Triggers","Backup & Recovery","Integrating MySQL with Applications"],
   },
 
-  {
-    id: "node-js",
-    title: "Node.js",
-    level: 50,
-    details: ["Core Node.js Concepts","Package Management (NPM & Yarn)", "File System & OS Module", "HTTP & Web Servers","Authentication & Security","Express.js & Middleware","Asynchronous Programming & Event Loop","Database Integration"],
-  },
+
   {
     id: "laravel",
     title: "Laravel",
@@ -138,7 +130,7 @@ const CLIENTS = [
   {
     id: "react",
     title: "React",
-    level: 55,
+    level: 45,
     details: ["Advanced React Concepts", "State Management", "React Router","Integrating Third-Party Libraries","TypeScript with React","Performance Optimization","React Context & Custom Hooks","Working with Forms","Side Effects & Data Fetching","Testing React Components"],
   },
   {
@@ -156,25 +148,27 @@ const CLIENTS = [
   },
 
   {
-    id: "vuejs",
-    title: "Vue.js",
-    level: 40,
-    details: [
-      "Vue CLI & Project Structure",
-      "Reactivity System & Data Binding",
-      "Components (Props, Events, Slots)",
-      "Vue Router (Routing & Navigation Guards)",
-      "State Management with Vuex or Pinia",
-      "Computed Properties & Watchers",
-      "Lifecycle Hooks",
-      "API Integration with Axios",
-      "Form Handling & Validation",
-      "Single File Components (.vue files)"
-    ],  },
+  id: "vite",
+  title: "Vite",
+  level: 40,
+  details: [
+    "Vite Project Setup & Folder Structure",
+    "Dev Server & Hot Module Replacement (HMR)",
+    "ES Modules & Native Browser Imports",
+    "Vite Config (vite.config.js / ts)",
+    "Environment Variables & Modes",
+    "Build Process & Optimization",
+    "Asset Handling (CSS, Images, Fonts)",
+    "Plugins & Integrations",
+    "Alias Paths & Module Resolution",
+    "Preview & Production Deployment"
+  ],
+},
+
 
   {
-    id: "ubuntu",
-    title: "Ubuntu",
+    id: "Linux",
+    title: "Linux",
     level: 40,
     details: ["File & Directory Management", "File Permissions & Ownership", "Working with Processes","Package Management","Networking & Remote Access","Scheduling Tasks"],
   },
@@ -185,19 +179,13 @@ const CLIENTS = [
     level: 80,
     details: ["Working with Extensions"," Integrated Terminal", "Multi-File & Multi-Project Management","Code Navigation & IntelliSense","Git Integration & Source Control","Customizing VS Code"]
   },
-  {
+  { 
     id: "visual-studio",
     title: "Visual Studio",
     level: 55,
     details: ["Source Control Integration", "Debugging Techniques",  "Working with ASP.NET Core Projects","Code Navigation & IntelliSense"],
   },
-
-  {
-    id: "sqlite",
-    title: "Sqlite",
-    level: 40,
-    details: ["Basic Database Operations", "Table Modification", "Querying Data","Working with Views & Triggers","Backup & Recovery"],
-  }, 
+ 
 ];
 
 export function TechStack() {
@@ -223,7 +211,7 @@ export function TechStack() {
         </Typography>
         <p className="font-bold text-gray-400 text-[11px] mb-8 inline-flex items-center">
           click for more info  
-          <Image  src={`image/click.gif`} width={20} height={20} alt="click" className="ml-2" />
+          <Image  src="/image/click.gif" width={20} height={20} alt="click" className="ml-2" />
         </p>
 
 
@@ -231,7 +219,7 @@ export function TechStack() {
           {CLIENTS.map((tech) => (
             <Image
               key={tech.id}
-              alt={tech.title}
+              alt={tech.title} 
               width={368}
               height={368}
               className="w-[5rem] cursor-pointer"
@@ -251,8 +239,8 @@ export function TechStack() {
         onPointerEnterCapture={() => {}} 
         onPointerLeaveCapture={() => {}}
       >
-        {selectedTech && (
-          <div > 
+        {selectedTech ? (
+          <div> 
           <div className="flex flex-row justify-center items-center gap-x-4 mb-10">
           <Image
               key={selectedTech.id}
@@ -318,7 +306,7 @@ export function TechStack() {
               Close
             </Button>
           </div>
-        )}
+        ) : null}
       </Dialog>
     </section>
   );
