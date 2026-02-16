@@ -43,18 +43,27 @@ const CLIENTS = [
     level: 70,
     details: ["Component Communication", "Services & Dependency Injection", "Routing & Navigation","tailwind","Forms & Validation","RxJS & Observables"],
   },
-  {
-    id: "dot-net",
-    title: ".NET",
-    level: 45,
-    details: ["RESTful APIs & Web Services", "Authentication & Authorization", "Object-Oriented Programming (OOP)"],
-  },
+{
+  id: "dot-net",
+  title: ".NET",
+  level: 55,
+  details: [
+    "Building RESTful APIs",
+    "Working with Controllers & Routing",
+    "Middleware configuration",
+    "Authentication & Authorization",
+    "Dependency Injection",
+    "Entity Framework",
+    "LINQ queries",
+    "Object-Oriented Programming (OOP)"
+  ],
+},
 
 
   {
     id: "javascript",
     title: "Javascript",
-    level: 80,
+    level: 70,
     details: ["Core JavaScript Fundamentals", "DOM Manipulation & Events", "Asynchronous JavaScript","Object-Oriented Programming (OOP)","Frontend Framework Basics","Working with APIs (AJAX & Fetch)","Modern ES6+ JavaScript Features","Error Handling & Debugging"],
   },
   {
@@ -92,21 +101,22 @@ const CLIENTS = [
   },
 
 
-  {
-    id: "laravel",
-    title: "Laravel",
-    level: 65,
-    details: [
-      "MVC Architecture & Routing",
-      "Eloquent ORM & Relationships",
-      "Database Migrations & Seeders",
-      "Authentication & Authorization (Sanctum/Passport)",
-      "API Resource Controllers & JSON Responses",
-      "Middleware & Request Validation",
-      "Environment Configuration & .env Files",
-      "Artisan Commands & Custom Commands"
-    ],
-  }, 
+{
+  id: "laravel",
+  title: "Laravel",
+  level: 40,
+  details: [
+    "Basic understanding of MVC",
+    "Creating simple routes",
+    "Building basic controllers",
+    "Connecting to a database",
+    "Running simple migrations",
+    "Basic CRUD operations",
+    "Using Blade templates",
+    "Starting the project with Artisan"
+  ],
+},
+
   {
     id: "php",
     title: "php",
