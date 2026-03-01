@@ -64,9 +64,9 @@ export default function Portfolio() {
           <FadeInSection>
             <MyTimeline />
           </FadeInSection>
-          {/* <FadeInSection>
-            <Projects />
-          </FadeInSection> */}
+          <FadeInSection> 
+            <Projects /> 
+          </FadeInSection>
           <FadeInSection>
             <Certifications />
           </FadeInSection>

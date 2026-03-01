@@ -1,0 +1,12 @@
+{
+  "cssImports": {
+    "C:\\work\\profile\\src\\app\\layout.tsx": [
+      "C:\\work\\profile\\src\\app\\globals.css"
+    ]
+  },
+  "cssModules": {
+    "C:\\work\\profile\\src\\app\\page": [
+      "C:\\work\\profile\\src\\app\\globals.css"
+    ]
+  }
+}
