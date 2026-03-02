@@ -2,7 +2,7 @@
 const path = require('path')
 const isProd = true
 
-const nextConfig = {
+const nextConfig = { 
   distDir: 'docs',
   basePath: isProd ? '/profile' : '',
   assetPrefix: isProd ? '/profile/' : '',
